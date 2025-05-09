@@ -1,0 +1,14 @@
+<odoo>
+    <!-- "Postal" addon menu -->
+    <menuitem id="postal_menu" name="Postal" />
+
+    <!-- Action to open the list  of regions -->
+    <record id="action_postal_region" model="ir.actions.act_window">
+        <field name="name">Regions</field>
+        <field name="res_model">postal.region</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu Link -->
+    <menuitem id="menu_postal_region" name="Region" parent="postal_menu" action="action_postal_region" sequence="10"  />
+</odoo>

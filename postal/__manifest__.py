@@ -15,7 +15,7 @@ Addon used to manage postal informations in France such as: region, department, 
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
     'category': 'Localization',
-    'version': '0.1',
+    'version': '0.2',
     'license': 'AGPL-3',
     'application': True,
     'images': '/static/description/icon.png',
@@ -25,8 +25,12 @@ Addon used to manage postal informations in France such as: region, department, 
 
     # always loaded
     'data': [
-        'security/security.xml',
-        # 'security/ir.model.access.csv',
+        'security/postal_security.xml',
+        'security/ir.model.access.csv',
+
+        'views/postal_menu.xml',
+        'views/region_views.xml',
+
         'views/views.xml',
         'views/templates.xml',
     ],

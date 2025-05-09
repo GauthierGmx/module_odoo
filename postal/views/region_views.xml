@@ -1,0 +1,28 @@
+<odoo>
+    <record id="view_form_region" model="ir.ui.view">
+        <field name="name">Regions form</field>
+        <field name="model">postal.region</field>
+        <field name="arch" type="xml">
+            <form string="region">
+                <sheet>
+                    <group name="group_line">
+                        <field name="insee_code"/>
+                        <field name="name"/>
+                        <field name="iso_3166_code"
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_list_region" model="ir.ui.view">
+        <field name="name">List of regions</field>
+        <field name="model">postal.region</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="insee_code"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+</odoo>
