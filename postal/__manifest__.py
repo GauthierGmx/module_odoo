@@ -16,6 +16,9 @@ Addon used to manage postal informations in France such as: region, department, 
     # for the full list
     'category': 'Localization',
     'version': '0.1',
+    'license': 'AGPL-3',
+    'application': True,
+    'images': '/static/description/icon.png',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
