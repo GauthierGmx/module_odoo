@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="postal.list">
+      <field name="name">postal list</field>
+      <field name="model">postal.postal</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="postal.action_window">
+      <field name="name">postal window</field>
+      <field name="res_model">postal.postal</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="postal.action_server">
+      <field name="name">postal server</field>
+      <field name="model_id" ref="model_postal_postal"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="postal" id="postal.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="postal.menu_1" parent="postal.menu_root"/>
+    <menuitem name="Menu 2" id="postal.menu_2" parent="postal.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="postal.menu_1_list" parent="postal.menu_1"
+              action="postal.action_window"/>
+    <menuitem name="Server to list" id="postal" parent="postal.menu_2"
+              action="postal.action_server"/>
+-->
+  </data>
+</odoo>
