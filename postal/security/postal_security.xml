@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <!-- Creation of the Postal module "User" group -->
+        <record id="postal_user_group" model="res.groups">
+            <field name="name">Postal user</field>
+            <field name="category_id" ref="base.module_category_localization"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <!-- Creation of the Postal module "Manager" group -->
+        <record id="postal_manager_group" model="res.groups">
+            <field name="name">Postal manager</field>
+            <field name="category_id" ref="base.module_category_localization"/>
+            <field name="implied_ids" eval="[(4, ref('postal_user_group'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+        </record>
+    </data>
+</odoo>
