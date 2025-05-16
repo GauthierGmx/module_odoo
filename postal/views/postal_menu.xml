@@ -8,7 +8,14 @@
         <field name="res_model">postal.region</field>
         <field name="view_mode">list,form</field>
     </record>
+    <!-- Action to open the list of departments -->
+    <record id="action_postal_departement" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">postal.departement</field>
+        <field name="view_mode">list,form</field>
+    </record>
 
     <!-- Menu Link -->
     <menuitem id="menu_postal_region" name="Region" parent="postal_menu" action="action_postal_region" sequence="10"  />
+    <menuitem id="menu_postal_departement" name="Department" parent="postal_menu" action="action_postal_departement" sequence="20" />
 </odoo>

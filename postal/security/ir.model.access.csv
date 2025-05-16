@@ -1,3 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_region_user,RegionUser,model_postal_region,postal_user_group,1,1,0,0
 access_region_manager,RegionManager,model_postal_region,postal_manager_group,1,1,1,1
+access_departement_user,DepartementUser,model_postal_departement,postal_user_group,1,1,0,0
+access_departement_manager,DepartementManager,model_postal_departement,postal_manager_group,1,1,1,1

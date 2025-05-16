@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_form_departement" model="ir.ui.view">
+        <field name="name">Department form</field>
+        <field name="model">postal.departement</field>
+        <field name="arch" type="xml">
+            <form string="department">
+                <sheet>
+                    <group name="group_line">
+                        <field name="name"/>
+                        <field name="insee_code"/>
+                        <field name="iso_3166_code"/>
+                        <field name="region_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_list_departement" model="ir.ui.view">
+        <field name="name">List of departments</field>
+        <field name="model">postal.departement</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="insee_code"/>
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+</odoo>
