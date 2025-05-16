@@ -5,12 +5,23 @@
         <field name="arch" type="xml">
             <form string="region">
                 <sheet>
-                    <group name="group_line">
-                        <field name="insee_code"/>
-                        <field name="name"/>
-                        <field name="iso_3166_code"/>
-                        <field name="departement_ids" widget="many2many"/>
-                    </group>
+                    <notebook>
+                        <page name="general" string="General Information">
+                            <group name="group_line">
+                                <h2>Informations of the region</h2>
+                                <field name="name"/>
+                                <field name="insee_code"/>
+                                <field name="iso_3166_code"/>
+                            </group>
+                        </page>
+
+                        <page name="departements" string="Departments">
+                            <group name="group_line">
+                                <h2>Departments of the region</h2>
+                                <field name="departement_ids" widget="many2many"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
