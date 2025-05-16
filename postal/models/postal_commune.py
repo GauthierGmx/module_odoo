@@ -15,6 +15,7 @@ class Commune(models.Model):
     ],string="Type of city", required=True)
     insee_code = fields.Char(string='INSEE Code', required=True)
     departement_id = fields.Many2one('postal.departement',string='Department', required=True)
+    codepostal_ids = fields.Many2many('postal.codepostal', string='Zip codes', required=True)
 
     # Hierarchical relationship between municipalities
     parent_id = fields.Many2one('postal.commune', string='Parent Municipality',ondelete='restrict')

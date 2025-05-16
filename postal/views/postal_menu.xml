@@ -20,9 +20,16 @@
         <field name="res_model">postal.commune</field>
         <field name="view_mode">list,form</field>
     </record>
+    <!-- Action to open the list of zip code -->
+    <record id="action_postal_codepostal" model="ir.actions.act_window">
+        <field name="name">Zip code</field>
+        <field name="res_model">postal.codepostal</field>
+        <field name="view_mode">list,form</field>
+    </record>
 
     <!-- Menu Link -->
     <menuitem id="menu_postal_region" name="Region" parent="postal_menu" action="action_postal_region" sequence="10"  />
     <menuitem id="menu_postal_departement" name="Department" parent="postal_menu" action="action_postal_departement" sequence="20" />
     <menuitem id="menu_postal_commune" name="City" parent="postal_menu" action="action_postal_commune" sequence="30" />
+    <menuitem id="menu_postal_codepostal" name="Zip code" parent="postal_menu" action="action_postal_codepostal" sequence="40" />
 </odoo>
