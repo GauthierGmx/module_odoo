@@ -11,3 +11,9 @@ class Departement(models.Model):
     insee_code = fields.Char(string='INSEE Code', required=True)
     region_id = fields.Many2one('postal.region', string='Region', required=True)
     commune_ids = fields.One2many('postal.commune', 'departement_id', string='Cities')
+    commune_count = fields.Integer(string='Number of Cities', compute='_compute_commune_count', store=True)
+
+    @api.depends('commune_ids')
+    def _compute_commune_count(self):
+        for record in self:
+            record.commune_count = len(record.commune_ids)

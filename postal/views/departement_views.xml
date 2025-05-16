@@ -23,6 +23,7 @@
             <list>
                 <field name="insee_code"/>
                 <field name="name"/>
+                <field name="commune_count"/>
             </list>
         </field>
     </record>
