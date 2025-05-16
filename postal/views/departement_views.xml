@@ -10,6 +10,7 @@
                         <field name="insee_code"/>
                         <field name="iso_3166_code"/>
                         <field name="region_id"/>
+                        <field name="commune_ids" widget="many2many"/>
                     </group>
                 </sheet>
             </form>

@@ -9,6 +9,7 @@
                         <field name="insee_code"/>
                         <field name="name"/>
                         <field name="iso_3166_code"/>
+                        <field name="departement_ids" widget="many2many"/>
                     </group>
                 </sheet>
             </form>

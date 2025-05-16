@@ -11,7 +11,8 @@
                         <field name="insee_code"/>
                         <field name="departement_id"/>
                         <field name="parent_id"/>
-                        <field name="child_ids"/>
+                        <field name="child_ids" widget="many2many"/>
+                        <field name="codepostal_ids" widget="many2many"/>
                     </group>
                 </sheet>
             </form>
