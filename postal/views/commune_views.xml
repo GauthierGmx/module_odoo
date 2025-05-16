@@ -5,15 +5,34 @@
         <field name="arch" type="xml">
             <form string="city">
                 <sheet>
-                    <group name="group_line">
-                        <field name="name"/>
-                        <field name="type_commune"/>
-                        <field name="insee_code"/>
-                        <field name="departement_id"/>
-                        <field name="parent_id"/>
-                        <field name="child_ids" widget="many2many"/>
-                        <field name="codepostal_ids" widget="many2many"/>
-                    </group>
+                    <notebook>
+                        <page name="general" string="General Informations">
+                            <group name="group_line">
+                                <h2>Informations about the city</h2>
+                                <field name="name"/>
+                                <field name="type_commune"/>
+                                <field name="insee_code"/>
+                                <separator/>
+                                <h2>Department of the city</h2>
+                                <field name="departement_id"/>
+                            </group>
+                        </page>
+
+                        <page name="parent_child_communes" string="Parent and Child communes">
+                            <group name="group_line">
+                                <h2>Parent and child cities</h2>
+                                <field name="parent_id"/>
+                                <field name="child_ids" widget="many2many"/>
+                            </group>
+                        </page>
+                        
+                        <page name="code_postal" string="Zip code">
+                            <group name="group_line">
+                                <h2>Zip code of the city</h2>
+                                <field name="codepostal_ids" widget="many2many"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
