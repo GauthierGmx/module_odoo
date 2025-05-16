@@ -8,7 +8,7 @@
                     <group name="group_line">
                         <field name="insee_code"/>
                         <field name="name"/>
-                        <field name="iso_3166_code"
+                        <field name="iso_3166_code"/>
                     </group>
                 </sheet>
             </form>
